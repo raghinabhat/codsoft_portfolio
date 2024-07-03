@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#header">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, it's me</h3>
+            <h1>Raghina Bhat</h1>
+            <p>and I am an IT fourth year student studying at PCCOE, Pune.<br>I like
+                learning about new technologies and currently I am working in brushing
+                up my skills in DSA and FrontEnd Development.
+            </p>
+            <br>
+            <br>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="20230825_182059.jpg">
+        </div>
+        <div class="about-text">
+            <h2>About<span>Me</span></h2>
+            <h4>IT Senior</h4>
+            <p>  I am a driven and dedicated engineering student with strong technical and managerial skills. Passionate about technology, I am currently improving my Data Structures and Algorithms (DSA) knowledge and learning front-end web development. Quick to pick up new skills, I enjoy learning and staying updated with the latest tech trends. My current goal is to gain new skills and secure an internship as a software analyst to apply my knowledge and gain practical experience.
+                </p>
+            <div class="tab-titles">
+                <p class="tab-links active" onclick="opentab('technical skills')">Technical Skills</p>
+                <p class="tab-links" onclick="opentab('soft skills')">Soft Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="technical skills">
+                <ul>
+                    <li><span>HTML</span></li>
+                    <li><span>CSS</span></li>
+                    <li><span>C++</span></li>
+                    <li><span>MySQL</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="soft skills">
+                <ul>
+                    <li><span>Management</span></li>
+                    <li><span>Critical Thinking</span></li>
+                    <li><span>Communication Skills</span></li>
+                    <li><span>Observation</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Virtual Internship by AICTE</span></li>
+                    <li><span>CPDC Lead</span></li>
+                    <li><span>Publicity Member</span></li>
+                    <li><span>IIC Member</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>B.Tech in IT (2021-Present)</span></li>
+                    <li><span>Higher Secondary School (2021)</span></li>
+                    <li><span>Senior Secondary School (2019)</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project" id="project">
+        <div class="container">
+            <h1>My<span>Projects</span></h1>
+            <div class="projects-list">
+                    <div>
+                        <h2>Healthcare Management System</h2>
+                        <p>Created a system that helped in locating nearby stores containing the medicines that are needed by the patients, so that they do not have to go far away in case of emergency.</p>
+                       
+                    </div>
+                    <div>
+                        <h2>Morse Code Convertor</h2>
+                        <p>Created a morse code convertor used in encryption and decryption of secretive messages that are used in various places, so that those important messages cannot be hacked by other party.</p>
+                       
+                    </div>
+                    <div>
+                        <h2>Student-based Chatbot</h2>
+                        <p>Created a chatbot which helped in storing data that helped students to know their time-table or schedule of their next exams.</p>
+                        
+                    </div>
+            </div>
+        </div>
+    </section>
+    <div id="contact">
+        <div class="container">
+
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact <span>Me</span></h1>
+                    <p><i class='bx bxs-envelope'></i>contact@gmail.com</p>
+                    <p><i class='bx bxs-phone'></i>0123456789</p>
+                    <div class="home-sci">
+                        <a href="#"><i class='bx bxl-github' ></i></a>
+                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+</body>
+</html>
